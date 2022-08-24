@@ -12,13 +12,14 @@ public class PlayerController : MonoBehaviour
     {
         this.myRigidbody2D = GetComponent<Rigidbody2D>();
     }
-    public void Move(Vector2 velocity)
-    {
-        this.velocity = velocity;
-    }
 
     private void FixedUpdate()
     {
         this.myRigidbody2D.MovePosition(myRigidbody2D.position + this.velocity * Time.fixedDeltaTime);
+    }
+
+    public void Move(Vector2 velocity)
+    {
+        this.velocity = velocity;
     }
 }
